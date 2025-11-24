@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -9,5 +9,28 @@
   <body>
     <div id="app"></div>
     <script type="module" src="/src/main.js"></script>
+
+    <div class="filters">
+      <button data-category="all">All</button>
+      <button data-category="Yours Truly">Yours Truly</button>
+      <button data-category="My Everything">My Everything</button>
+      <button data-category="Dangerous Woman">Dangerous Woman</button>
+      <button data-category="Sweetener">Sweetener</button>
+      <button data-category="Thank U, Next">Thank U, Next</button>
+      <button data-category="Positions">Positions</button>
+      <button data-category="Eternal Sunshine">Eternal Sunshine</button>
+      <button data-category="Wicked">Wicked</button>
+    </div>
+
+    <header class="random-art">
+      <div class="random-art-stuff">
+        <h1>Random Art of the Day</h1>
+        <img id="random-art-image" src="" alt="Random Ariana Grande Image" />
+        <h2 id="random-art-name"></h2>
+      </div>
+    </header>
+
+    <div class="gallery"></div>
+    <div class="gallery"></div>
   </body>
 </html>
