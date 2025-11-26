@@ -177,9 +177,6 @@ filterButtons.forEach(button => {
 });
 
 
-Digital Art Gallery- You will create a site to view art or photos or whatever
-aesthetically pleasing thing makes sense to you. Allow users to filter the
-images.
 Project must include the following.
 ● Preselected image gallery which can be filtered or changed
 

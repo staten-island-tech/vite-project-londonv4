@@ -5,10 +5,20 @@
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>vite-project</title>
+    <link rel="stylesheet" href="index.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
-    <div id="app"></div>
-    <script type="module" src="/src/main.js"></script>
+    <header class="random-art">
+      <div class="random-art-stuff">
+        <h1>Random Art of the Day</h1>
+        <img id="random-art-image" src="" alt="Random Ariana Grande Image" />
+        <h2 id="random-art-name"></h2>
+      </div>
+    </header>
 
     <div class="filters">
       <button data-category="all">All</button>
@@ -22,15 +32,21 @@
       <button data-category="Wicked">Wicked</button>
     </div>
 
-    <header class="random-art">
-      <div class="random-art-stuff">
-        <h1>Random Art of the Day</h1>
-        <img id="random-art-image" src="" alt="Random Ariana Grande Image" />
-        <h2 id="random-art-name"></h2>
+    <div class="gallery">
+      <div class="card">
+        <div class="h2">
+          <h2>Thank U, Next</h2>
+        </div>
+        <div class="img">
+          <img
+            src="https://i.pinimg.com/736x/92/a4/6f/92a46f59f953227a34ad3f20b287f261.jpg"
+          />
+        </div>
+        <div class="h3">
+          <h3>words</h3>
+        </div>
       </div>
-    </header>
-
-    <div class="gallery"></div>
-    <div class="gallery"></div>
+    </div>
+    <script src="app.js"></script>
   </body>
 </html>
