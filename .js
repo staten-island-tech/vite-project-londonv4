@@ -70,7 +70,7 @@ const gallery = [
     url: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT0cmCb5cACj_w4BarXr9J47i1fMF-NRirxxw&s",
     category: "Wicked",
     alt: "Ariana Grande"
-  }
+  },
   {
     name: "Ariana Grande",
     url: "https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/da63f2c9-bc83-4ac1-b2ad-65c3ce66779d/d7qujnj-69b0419b-bc0c-4e90-83b0-b522b18b7e2d.jpg/v1/fill/w_1024,h_1024,q_75,strp/ariana_grande___my_everything__draw__by_ivantenorio_d7qujnj-fullview.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9MTAyNCIsInBhdGgiOiIvZi9kYTYzZjJjOS1iYzgzLTRhYzEtYjJhZC02NWMzY2U2Njc3OWQvZDdxdWpuai02OWIwNDE5Yi1iYzBjLTRlOTAtODNiMC1iNTIyYjE4YjdlMmQuanBnIiwid2lkdGgiOiI8PTEwMjQifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6aW1hZ2Uub3BlcmF0aW9ucyJdfQ.dEqMo_rbJsIEQff1Dl9qfiTcW7GhfmT4rtVMmil2E9I",
@@ -139,12 +139,12 @@ const gallery = [
   },
 ];
 
-const productContainer = document.querySelector('.container');
+const productGallery = document.querySelector('.gallery');
 const filterButtons = document.querySelectorAll('.filter-container button');
 
 
 function displayProducts(items) {
-  productContainer.innerHTML = "";
+  productGallery.innerHTML = "";
   items.forEach(item => {
     const cardHTML = `
       <div class="card">
@@ -160,10 +160,8 @@ function displayProducts(items) {
   });
 }
 
-// Show all products by default
-displayProducts(makeup);
+displayProducts(gallery);
 
-// Filter logic
 filterButtons.forEach(button => {
   button.addEventListener("click", () => {
     const category = button.getAttribute("data-category");
@@ -177,12 +175,12 @@ filterButtons.forEach(button => {
 });
 
 
-Project must include the following.
-● Preselected image gallery which can be filtered or changed
+// Project must include the following.
+// ● Preselected image gallery which can be filtered or changed
 
-● Users can click on an image to generate a pop-up modal to learn
-more information
-● Upload new images
-● Random art of the day header
-● Light mode/ dark mode or theming in general
+// ● Users can click on an image to generate a pop-up modal to learn
+// more information
+// ● Upload new images
+// ● Random art of the day header
+// ● Light mode/ dark mode or theming in general
 
