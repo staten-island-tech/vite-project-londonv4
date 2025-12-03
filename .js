@@ -139,48 +139,46 @@ const gallery = [
   },
 ];
 
-const productGallery = document.querySelector('.gallery');
-const filterButtons = document.querySelectorAll('.filter-container button');
-
+const productGallery = document.querySelector('.container');
+const filterButtons = document.querySelector('.filters button');
 
 function displayProducts(items) {
-  productGallery.innerHTML = "";
-  items.forEach(item => {
+    items.forEach(item => {
     const cardHTML = `
       <div class="card">
         <div class="img">
-          <img src="${item.img}" alt="${item.name}">
+          <img src="${item.url}" alt="${item.alt}">
         </div>
         <div class="h2"><h2>${item.name}</h2></div>
-        <div class="h3"><h3>$${item.price.toFixed(2)}</h3></div>
-        <div class="btn"><button>Add To Cart</button></div>
+        <div class="h3"><h3>${item.category}</h3></div>
       </div>
     `;
-    productContainer.insertAdjacentHTML("beforeend", cardHTML);
+    productGallery.insertAdjacentHTML("beforeend", cardHTML);
   });
 }
+
+
+
+
+
+
+
+
+
+
+
 
 displayProducts(gallery);
 
 filterButtons.forEach(button => {
   button.addEventListener("click", () => {
     const category = button.getAttribute("data-category");
-    if (category === "All") {
-      displayProducts(makeup);
+    
+    if (category === "all") {
+      displayProducts(gallery);
     } else {
-      const filtered = makeup.filter(item => item.category === category);
+      const filtered = gallery.filter(item => item.category === category);
       displayProducts(filtered);
     }
   });
 });
-
-
-// Project must include the following.
-// ● Preselected image gallery which can be filtered or changed
-
-// ● Users can click on an image to generate a pop-up modal to learn
-// more information
-// ● Upload new images
-// ● Random art of the day header
-// ● Light mode/ dark mode or theming in general
-
