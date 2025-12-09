@@ -1,4 +1,4 @@
-:root {
+/* :root {
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
@@ -94,7 +94,7 @@ button:focus-visible {
   button {
     background-color: #f9f9f9;
   }
-}
+} */
 
 * {
   margin: 0;
@@ -165,20 +165,20 @@ body {
   transition: transform 0.2s;
 }
 
-img {
+.img {
   width: 180px;
   height: 180px;
   object-fit: cover;
   border-radius: 10px;
 }
 
-h2 {
+.h2 {
   font-size: 1.1rem;
   color: #333;
   margin: 15px 0 5px;
 }
 
-h3 {
+.h3 {
   font-size: 1rem;
   color: plum;
   margin-bottom: 10px;

@@ -24,7 +24,6 @@ document.querySelector('#app').innerHTML = `
 setupCounter(document.querySelector('#counter'))
 
 
-
 const gallery = [
   {
     name: "Ariana Grande",
@@ -166,14 +165,12 @@ const gallery = [
   },
 ];
 
-
-
-const productGallery = document.querySelector('.gallery');
-const filterButtons = document.querySelector('.filters button');
-
+const productGallery = document.querySelector(".gallery");
+const filterButtons = document.querySelectorAll(".filters button");
 
 function displayProducts(items) {
-    items.forEach(item => {
+  productGallery.innerHTML = "";
+  items.forEach(item => {
     const cardHTML = `
       <div class="card">
         <div class="img">
@@ -187,14 +184,11 @@ function displayProducts(items) {
   });
 }
 
-
 displayProducts(gallery);
-
 
 filterButtons.forEach(button => {
   button.addEventListener("click", () => {
     const category = button.getAttribute("data-category");
-   
     if (category === "all") {
       displayProducts(gallery);
     } else {
@@ -203,3 +197,4 @@ filterButtons.forEach(button => {
     }
   });
 });
+
