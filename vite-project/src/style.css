@@ -183,3 +183,51 @@ body {
   color: plum;
   margin-bottom: 10px;
 }
+
+.random {
+  text-align: center;
+  margin: 30px 0 20px;
+}
+
+.random {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: hotpink;
+}
+
+.filter-container {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.filter-container button {
+  background-color: hotpink;
+  color: white;
+  border: none;
+  border-radius: 25px;
+  padding: 10px 20px;
+  margin: 0 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.filter-container button:hover {
+  background-color: #ff85c0;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card img {
+  width: 180px;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.btn button:hover {
+  background-color: deepskyblue;
+  color: white;
+}

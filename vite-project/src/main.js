@@ -174,7 +174,7 @@ const filterButtons = document.querySelector('.filters button');
 
 
 function displayProducts(items) {
-  productContainer.innerHTML = "";
+  productGallery.innerHTML = "";
     items.forEach(item => {
     const cardHTML = `
       <div class="card">
@@ -197,7 +197,7 @@ filterButtons.forEach(button => {
   button.addEventListener("click", () => {
     const category = button.getAttribute("data-category");
    
-    if (category === "all") {
+    if (category === "All") {
       displayProducts(gallery);
     } else {
       const filtered = gallery.filter(item => item.category === category);
@@ -205,6 +205,8 @@ filterButtons.forEach(button => {
     }
   });
 });
+
+
 
 
 
