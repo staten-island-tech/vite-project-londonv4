@@ -8,18 +8,28 @@
   </head>
 
   <body>
-    <header class="random">
-      <h1>Random Art of the Day</h1>
-    </header>
+    <header class="random">Random Art of the Day</header>
+
+    <div class="add">
+      <input class="user-name" placeholder="Name" />
+      <input class="user-url" placeholder="Image URL" />
+      <input class="user-category" placeholder="Category" />
+      <button class="btn">Upload Art</button>
+    </div>
 
     <div class="filters">
       <button data-category="All">All</button>
-      <button data-category="Dangerous Woman">Dangerous Woman</button>
+      <button class="click" data-category="Dangerous Woman">
+        Dangerous Woman
+      </button>
       <button data-category="Sweetener">Sweetener</button>
       <button data-category="Positions">Positions</button>
       <button data-category="Thank U, Next">Thank U, Next</button>
       <button data-category="Wicked">Wicked</button>
     </div>
+    \
+
+    <button class="mode-toggle">Dark Mode</button>
 
     <div class="gallery">
       <div class="card">

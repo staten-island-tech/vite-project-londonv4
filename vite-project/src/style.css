@@ -121,27 +121,6 @@ body {
   color: hotpink;
 }
 
-.filter-gallery {
-  text-align: center;
-  margin-bottom: 30px;
-}
-
-.filter-gallery button {
-  background-color: hotpink;
-  color: white;
-  border: none;
-  border-radius: 25px;
-  padding: 10px 20px;
-  margin: 0 5px;
-  font-size: 1rem;
-  cursor: pointer;
-  transition: background-color 0.3s;
-}
-
-.filter-gallery button:hover {
-  background-color: #ff85c0;
-}
-
 .gallery {
   display: flex;
   flex-wrap: wrap;
@@ -180,11 +159,16 @@ body {
 
 .h3 {
   font-size: 1rem;
-  color: plum;
+  color: rgb(255, 85, 178);
   margin-bottom: 10px;
 }
 
 .random {
+  text-align: center;
+  margin: 30px 0 20px;
+}
+
+.add {
   text-align: center;
   margin: 30px 0 20px;
 }
@@ -230,4 +214,26 @@ body {
 .btn button:hover {
   background-color: deepskyblue;
   color: white;
+}
+
+.dark {
+  background-color: #111;
+  color: pink;
+}
+.dark .card {
+  background-color: #222;
+  border: 2px solid pink;
+}
+.dark .filters button {
+  background-color: pink;
+  color: black;
+}
+.dark .add-art input {
+  background-color: #222;
+  color: pink;
+  border: 2px solid pink;
+}
+.dark .add-art button {
+  background-color: pink;
+  color: black;
 }

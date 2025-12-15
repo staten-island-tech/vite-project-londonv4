@@ -204,10 +204,44 @@ filterButtons.forEach(button => {
       displayProducts(filtered);
     }
   });
+
+  const userName = document.querySelector(".user-name");
+const userUrl = document.querySelector(".user-url");
+const userCategory = document.querySelector(".user-category");
+const addBtn = document.querySelector(".add-btn");
+
+
+
+addBtn.addEventListener("click", () => {
+  const newArt = {
+    name: userName.value,
+    url: userUrl.value,
+    category: userCategory.value,
+    alt: userName.value
+  };
+  gallery.push(newArt);
+  displayProducts(gallery);
+  userName.value = "";
+  userUrl.value = "";
+  userCategory.value = "";
 });
 
 
 
+});
+
+
+
+
+const modeToggle = document.querySelector(".mode-toggle");
+modeToggle.addEventListener("click", () => {
+  document.body.classList.toggle("dark");
+  if (document.body.classList.contains("dark")) {
+    modeToggle.textContent = "Light Mode";
+  } else {
+    modeToggle.textContent = "Dark Mode";
+  }
+});
 
 
 
