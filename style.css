@@ -1,0 +1,145 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 10px;
+}
+
+
+html,
+body {
+  font-family: "Quicksand", sans-serif;
+  background-color: #f9f9f9;
+  padding: 20px;
+}
+
+
+
+
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  max-width: 1100px;
+  margin: 0 auto;
+  gap: 20px;
+}
+
+
+.card {
+  flex: 0 1 23%;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  text-align: center;
+  transition: transform 0.2s;
+}
+
+
+.img {
+  width: 180px;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+
+.h2 {
+  font-size: 1.1rem;
+  color: #333;
+  margin: 15px 0 5px;
+}
+
+
+.h3 {
+  font-size: 1rem;
+  color: rgb(255, 85, 178);
+  margin-bottom: 10px;
+}
+
+
+.random {
+  text-align: center;
+  margin: 30px 0 20px;
+}
+
+
+.add {
+  text-align: center;
+  margin: 30px 0 20px;
+}
+
+
+.random {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: hotpink;
+}
+
+
+
+
+.filters {
+  background-color: hotpink;
+  color: white;
+  border: none;
+  border-radius: 25px;
+  padding: 10px 20px;
+  margin: 0 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+
+.card img {
+  width: 180px;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+
+.btn button:hover {
+  background-color: deepskyblue;
+  color: white;
+}
+
+
+.dark {
+  background-color: #111;
+  color: pink;
+}
+.dark .card {
+  background-color: #222;
+  border: 2px solid pink;
+}
+.dark .filters button {
+  background-color: pink;
+  color: black;
+}
+.dark .add-art input {
+  background-color: #222;
+  color: pink;
+  border: 2px solid pink;
+}
+.dark .add-art button {
+  background-color: pink;
+  color: black;
+}
+
+.filters button {
+  background-color: hotpink;
+  color: white;
+}
