@@ -5,7 +5,6 @@
   font-size: 10px;
 }
 
-
 html,
 body {
   font-family: "Quicksand", sans-serif;
@@ -13,19 +12,75 @@ body {
   padding: 20px;
 }
 
-
-.filters {
+.random {
   text-align: center;
   margin: 30px 0 20px;
-}
-
-
-.filters {
   font-size: 2.5rem;
   font-weight: bold;
   color: hotpink;
 }
 
+.random-art {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+.random-art img {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+.random-art h2 {
+  font-size: 1.5rem;
+  color: #333;
+}
+
+.random-art h3 {
+  font-size: 1.2rem;
+  color: rgb(255, 85, 178);
+}
+
+.add {
+  text-align: center;
+  margin: 30px 0 20px;
+}
+
+.add input {
+  padding: 8px;
+  margin: 0 5px 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+.btn {
+  padding: 8px 15px;
+  background: hotpink;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.filters {
+  text-align: center;
+  margin: 20px 0;
+}
+
+.filters button {
+  background-color: hotpink;
+  color: white;
+  border: none;
+  border-radius: 25px;
+  padding: 10px 20px;
+  margin: 0 5px 10px;
+  font-size: 1rem;
+  cursor: pointer;
+}
 
 .gallery {
   display: flex;
@@ -35,7 +90,6 @@ body {
   margin: 0 auto;
   gap: 20px;
 }
-
 
 .card {
   flex: 0 1 23%;
@@ -51,76 +105,9 @@ body {
   transition: transform 0.2s;
 }
 
-
-.img {
-  width: 180px;
-  height: 180px;
-  object-fit: cover;
-  border-radius: 10px;
-}
-
-
-.h2 {
-  font-size: 1.1rem;
-  color: #333;
-  margin: 15px 0 5px;
-}
-
-
-.h3 {
-  font-size: 1rem;
-  color: rgb(255, 85, 178);
-  margin-bottom: 10px;
-}
-
-
-.random {
-  text-align: center;
-  margin: 30px 0 20px;
-}
-
-
-.add {
-  text-align: center;
-  margin: 30px 0 20px;
-}
-
-
-.random {
-  font-size: 2.5rem;
-  font-weight: bold;
-  color: hotpink;
-}
-
-
-.filter-container {
-  text-align: center;
-  margin-bottom: 30px;
-}
-
-
-.filter-container button {
-  background-color: hotpink;
-  color: white;
-  border: none;
-  border-radius: 25px;
-  padding: 10px 20px;
-  margin: 0 5px;
-  font-size: 1rem;
-  cursor: pointer;
-  transition: background-color 0.3s;
-}
-
-
-.filter-container button:hover {
-  background-color: #ff85c0;
-}
-
-
 .card:hover {
   transform: translateY(-5px);
 }
-
 
 .card img {
   width: 180px;
@@ -129,36 +116,75 @@ body {
   border-radius: 10px;
 }
 
-
-.btn button:hover {
-  background-color: deepskyblue;
-  color: white;
+.card h2 {
+  font-size: 1.1rem;
+  color: #333;
+  margin: 15px 0 5px;
 }
+
+.card h3 {
+  font-size: 1rem;
+  color: rgb(255, 85, 178);
+  margin-bottom: 10px;
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2000;
+}
+
+.hidden {
+  display: none;
+}
+
+.modal-content {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  position: relative;
+}
+
+.modal-close {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+
+
+
+
+
+
 
 
 .dark {
   background-color: #111;
   color: pink;
 }
+
 .dark .card {
   background-color: #222;
   border: 2px solid pink;
 }
+
 .dark .filters button {
   background-color: pink;
   color: black;
 }
-.dark .add-art input {
-  background-color: #222;
-  color: pink;
-  border: 2px solid pink;
-}
-.dark .add-art button {
+
+.dark .btn {
   background-color: pink;
   color: black;
 }
-
-
-
-
-

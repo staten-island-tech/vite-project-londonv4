@@ -162,21 +162,15 @@ const gallery = [
     category: "Eternal Sunshine",
     alt: "Ariana Grande"
   },
-];
-
-
-
-
-
+]
 
 const productGallery = document.querySelector('.gallery');
 const filterButtons = document.querySelectorAll('.filters button');
 
 
-
 function displayProducts(items) {
   productGallery.innerHTML = "";
-    items.forEach(item => {
+  items.forEach(item => {
     const cardHTML = `
       <div class="card">
         <div class="img">
@@ -190,9 +184,10 @@ function displayProducts(items) {
   });
 }
 
+
 filterButtons.forEach(button => {
   button.addEventListener("click", () => {
-    const category = button.dataset.category;
+    const category = button.getAttribute("data-category");
 
     let itemsToShow = gallery;
 
@@ -206,37 +201,31 @@ filterButtons.forEach(button => {
   });
 });
 
-
-
 displayProducts(gallery);
 
+const randomHeader = document.querySelector(".random");
+function displayRandomArt() {
+  const valid = gallery.filter(i => i.url && i.url.trim() !== "");
+  const rand = valid[Math.floor(Math.random() * valid.length)];
+  randomHeader.innerHTML = `
+    <h1>Random Art of the Day</h1>
+    <div class="random-art">
+      <img src="${rand.url}" alt="${rand.alt}">
+      <h2>${rand.name}</h2>
+      <h3>${rand.category}</h3>
+    </div>
+  `;
+}
+displayRandomArt();
 
 
-
-filterButtons.forEach(button => {
-  button.addEventListener("click", () => {
-    const category = button.getAttribute("data-category");
-   
-    if (category === "All") {
-      displayProducts(gallery);
-    } else {
-      const filtered = gallery.filter(item => item.category === category);
-      displayProducts(filtered);
-    }
-  });
-
-
-  const userName = document.querySelector(".user-name");
+const userName = document.querySelector(".user-name");
 const userUrl = document.querySelector(".user-url");
 const userCategory = document.querySelector(".user-category");
-const addBtn = document.querySelector(".add-btn");
+const uploadBtn = document.querySelector(".btn");
 
-
-
-
-
-
-addBtn.addEventListener("click", () => {
+uploadBtn.addEventListener("click", () => {
+  if (!userUrl.value) return;
   const newArt = {
     name: userName.value,
     url: userUrl.value,
@@ -245,49 +234,14 @@ addBtn.addEventListener("click", () => {
   };
   gallery.push(newArt);
   displayProducts(gallery);
+  displayRandomArt();
   userName.value = "";
   userUrl.value = "";
   userCategory.value = "";
 });
 
-
-
-
-
-
-});
-
-
-
-
-
-
-
-
-const modeToggle = document.querySelector(".mode-toggle");
-modeToggle.addEventListener("click", () => {
-  document.body.classList.toggle("dark");
-  if (document.body.classList.contains("dark")) {
-    modeToggle.textContent = "Light Mode";
-  } else {
-    modeToggle.textContent = "Dark Mode";
-  }
-});
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+const modal = document.querySelector(".modal");
+const modalImg = document.querySelector(".modal-img");
+const modalName = document.querySelector(".modal-name");
+const modalCat = document.querySelector(".modal-cat");
+const modalClose = document.querySelector(".modal-close");
