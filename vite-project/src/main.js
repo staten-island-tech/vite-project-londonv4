@@ -38,7 +38,7 @@ const gallery = [
   },
    {
     name: "Ariana Grande",
-    url: "",
+    url: "https://i0.wp.com/tsl.news/wp-content/uploads/2024/04/LuciaM_Ariana_newalbum.png?resize=715%2C550&ssl=1",
     category: "Eternal Sunshine",
     alt: "Ariana Grande"
   },
@@ -152,7 +152,7 @@ const gallery = [
   },
   {
     name: "Ariana Grande",
-    url: "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.pinterest.com%2Fpin%2F745556913346578407%2F&psig=AOvVaw2hThwLi7L0_LwIcsbqbxoO&ust=1764176574994000&source=images&cd=vfe&opi=89978449&ved=0CBYQjRxqFwoTCKiI7oTkjZEDFQAAAAAdAAAAABAr",
+    url: "https://pbs.twimg.com/media/GZzUUORWAAAEKMx.jpg",
     category: "Wicked",
     alt: "Ariana Grande"
   },
@@ -160,6 +160,12 @@ const gallery = [
     name: "Ariana Grande",
     url: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTx4wWRKdA8R9qbSCGAeZmcOqyvzdrtlfM-UQ&s",
     category: "Eternal Sunshine",
+    alt: "Ariana Grande"
+  },
+    {
+    name: "Ariana Grande",
+    url: "https://i.pinimg.com/474x/29/52/09/2952094b29a582ad69fd3987ebc7a206.jpg",
+    category: "Yours Truly",
     alt: "Ariana Grande"
   },
 ]
@@ -239,9 +245,3 @@ uploadBtn.addEventListener("click", () => {
   userUrl.value = "";
   userCategory.value = "";
 });
-
-const modal = document.querySelector(".modal");
-const modalImg = document.querySelector(".modal-img");
-const modalName = document.querySelector(".modal-name");
-const modalCat = document.querySelector(".modal-cat");
-const modalClose = document.querySelector(".modal-close");
